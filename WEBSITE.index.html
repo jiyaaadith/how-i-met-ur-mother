@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Met Your Mother</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url("photos/IMG_1240 - Copy.JPG") no-repeat center center fixed;
+            background-size: cover;
+            color: hsl(13, 25%, 28%);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header,
+        footer {
+            background-color: rgba(139, 94, 60, 0.8); 
+            color: rgb(241, 238, 238, 0.8);
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            background-color: hsl(0, 0%, 100%, 0.8);
+            opacity: 50
+            ;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #8b5e3c;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .gallery,
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 200px;
+            perspective: 1000px;
+        }
+
+        .card img,
+        .video-gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s;
+        }
+
+        .card:hover img,
+        .video-gallery video:hover {
+            transform: scale(1.1);
+        }
+
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #83542f;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -10px;
+        }
+
+        .timeline li {
+            padding: 10px 20px;
+            position: relative;
+            background-color: inherit;
+            width: 45%;
+            text-align: right;
+            left: 50%;
+            cursor: pointer;
+        }
+
+        .timeline li:nth-child(odd) {
+            left: 0;
+            text-align: left;
+        }
+
+        .timeline li::after {
+            content: ' ';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: #8b5e3c;
+            border: 4px solid #8b5e3c;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline li:nth-child(odd)::after {
+            left: -13px;
+        }
+
+        #timeline-photo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #timeline-photo img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            section {
+                margin: 50px auto;
+                padding: 15px;
+            }
+
+            .gallery,
+            .video-gallery {
+                justify-content: flex-start;
+            }
+
+            .card,
+            .video-gallery video {
+                width: 100%;
+            }
+
+            .timeline li {
+                width: 100%;
+                left: 0;
+                text-align: left;
+            }
+
+            .timeline li::after {
+                right: auto;
+                left: -13px;
+            }
+        }
+    </style>
+</head>
+
+<body class="smooth-scroll">
+    <header>
+        <h1>How I Met Your Mother</h1>
+    </header>
+
+    <nav>
+        <a href="#our-story">Our Story</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#photo-gallery">Photo Gallery</a>
+        <a href="#video-gallery">Video Gallery</a>
+        <a href="#messages">Messages</a>
+    </nav>
+
+    <section id="our-story" class="fade-in">
+        <h2>Our Story</h2>
+                      <p>
+            Once upon a time, I stumbled upon this mesmerizing girl through her Instagram stories. There was something about her energy, her vibe, that just hooked me right in. Fast forward to my birthday, February 10th—just when I thought it would be a regular day, she surprised me with the most horrible birthday wish "HAPPY BIRTHDAY AADITH CHETOI. That's when it all began. Our first official hangout was over coffee on February 12th. I remember it like it was yesterday— trying to be cool, while inside, my heart was doing backflips. We didn’t just stop at coffee; we went on this epic adventure—walking through the the streets of Manipal, visiting a church (I’m not even religious, but it felt magical), and exploring some breathtaking spots around town. As we talked, I realized she wasn’t just cute; she was smart, funny, and had this way of making everything seem exciting. We bonded over our families, our dreams for the future, and discovered that we both had a weird obsession with naming our future daughter Natasha (weird, right? But it felt like fate).
+        </p>
+        <p>
+            From that day on, we were inseparable. She met my family, including Neeraja, who’s practically a legend in our household. And let me tell you, kids, your mom fit right in—like she was always meant to be there. She brought this warmth and joy that just lit up our lives. But it wasn’t just the big moments that got me. It was the little things—like the way she’d feed me or how we’d stay up late, talking about everything under the stars. And speaking of stars, there was this one night we were stargazing, and I couldn’t hold back anymore—I leaned in and kissed her. It was like the universe held its breath, waiting to see what would happen next. In just 30 days, she went from being a girl I liked to the love of my life. She showed me what it means to be loved unconditionally and to love someone with your whole heart. And here we are, telling you this story, because it’s not just about how we met—it’s about the adventure we’ve been on ever since. So, my darlings, remember this: sometimes, the best things in life come when you least expect them. And when you find that person who makes your heart skip a beat and your soul sing, hold onto them tight—because that’s what true love is all about.
+        </p>
+    </section>
+
+   <section id="timeline" class="fade-in clearfi">
+    <h2>Timeline</h2>
+    <ul class="timeline">
+        <li data-img="photos/IMG_9935.jpg"><strong>Feb 10:</strong> HAPPY BIRTHDAY AADITH CHETTOI</li>
+        <li data-img="photos/WhatsApp Image 2024-06-16 at 13.58.07_da4ccccc.jpg"><strong>Feb 12:</strong> ADITYA MESS</li>
+        <li data-img="photos/Screenshot 2024-06-16 140333.png"><strong>Feb 14:</strong> VALENTINES DAY</li>
+        <li data-img="photos/WhatsApp Image 2024-06-16 at 13.58.25_523a2766.jpg"><strong>Feb 18:</strong> CHAAI CAFE WALK</li>
+        <li data-img="photos/WhatsApp Image 2024-06-16 at 13.58.35_5029d220.jpg"><strong>Feb 19:</strong> RAILWAY BRIDGE</li>
+        <li data-img="photos/DSC_0489.JPEG"><strong>Feb 24:</strong> OPUS</li>
+        <li data-img="photos/WhatsApp Image 2024-06-16 at 13.58.50_2f580464.JPG"><strong>March 2:</strong> JIYA BDAY</li>
+    </ul>
+    <div id="timeline-photo">
+        <img src="" alt="Timeline Photo">
+    </div>
+</section>
+
+
+
+    <section id="photo-gallery" class="fade-in">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <div class="card">
+            <img src="photos/DSC_0606.JPEG" alt="Photo 1">
+        </div>
+        <div class="card">
+            <img src="photos/IHFO0890.JPG" alt="Photo 2">
+        </div>
+        <div class="card">
+            <img src="photos/IMG_0975.JPG" alt="Photo 3">
+        </div>
+        <div class="card">
+            <img src="photos/IMG_1168.jpg" alt="Photo 4">
+        </div>
+        <div class="card">
+            <img src="photos/Screenshot 2024-06-16 140435.png" alt="Photo 5">
+        </div>
+        <div class="card">
+            <img src="photos/IMG_2130.JPG" alt="Photo 6">
+        </div>
+        <div class="card">
+            <img src="photos/WhatsApp Image 2024-05-30 at 23.36.44_7f032cb6.jpg" alt="Photo 7">
+        </div>
+        <div class="card">
+            <img src="photos/IMG_2130.JPG" alt="Photo 8">
+        </div>
+        <div class="card">
+            <img src="photos/WhatsApp Image 2024-04-12 at 22.40.05_720d06d7.jpg" alt="Photo 9">
+        </div>
+    </div>
+</section>
+  
+<section id="video-gallery" class="fade-in">
+    <h2>Video Gallery</h2>
+    <div class="gallery video-gallery">
+        <div class="card">
+            <video controls>
+                <source src="videos/WhatsApp Video 2024-05-21 at 05.28.02_aa733455.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="card">
+            <video controls>
+                <source src="videos/IMG_1132 (1).MOV" type="video/mp4">
+            </video>
+        </div>
+        <div class="card">
+            <video controls>
+                <source src="videos/IMG_1133.MOV" type="video/mp4">
+            </video>
+        </div>
+	<div class="card">
+            <video controls>
+                <source src="videos/Aval_1.mp4" type="video/mp4">
+            </video>
+        </div>
+	<div class="card">
+            <video controls>
+                <source src="videos/IMG_5103 (1).mp4" type="video/mp4">
+            </video>
+        </div>
+	<div class="card">
+            <video controls>
+                <source src="videos/WhatsApp Video 2024-06-16 at 23.57.58_af45ce69.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Add more video cards as needed -->
+    </div>
+</section>
+
+
+    <section id="messages" class="fade-in">
+        <h2>Messages to Our Future Kids</h2>
+        <p>To Our Dearest Children,
+
+From the very moment we dreamed of you, our hearts have been filled with an overwhelming sense of love and anticipation. As your parents, we want to share with you a few things that we hold dear in our hearts.
+
+First and foremost, know that you are loved beyond measure. From the day you come into this world and every day after, our love for you will be unconditional and unwavering. You are a blessing in our lives, and we cherish every moment we get to spend with you.
+
+We hope you grow up knowing the value of kindness. Treat everyone you meet with compassion and respect. The world can be a challenging place, but with kindness and empathy, you can make it a little brighter and better.
+
+Dream big and never be afraid to pursue your passions. Whatever it is that sets your soul on fire, go after it with everything you've got. We will always be here to support you, to encourage you, and to cheer you on every step of the way.
+
+Remember to embrace the beauty in the small moments. Life is a collection of fleeting experiences, and sometimes the simplest of things can bring the greatest joy. Cherish the sunsets, the laughter shared with friends, and the quiet moments of reflection.
+
+Learn to forgive, both others and yourself. Mistakes are a part of life, and they help us grow. Holding onto anger or regret will only weigh you down. Forgiveness is a powerful tool that will help you move forward with a light heart.
+
+Family is everything. The bonds we share are unbreakable, and no matter where life takes you, you will always have a home with us. We are your biggest fans, your safe haven, and your eternal support system.
+
+Lastly, know that you are enough, just as you are. You don’t need to be perfect or fit into any mold. Be true to yourself, follow your heart, and live authentically. Your uniqueness is your greatest strength, and the world needs you just the way you are.
+
+With all our love,
+
+Mom and Dad
+
+        </p>
+    </section>
+
+    <footer>
+        <p>Created with love by Achu and Jiya.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation to sections when they enter the viewport
+        const sections = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Timeline functionality
+        const timelineItems = document.querySelectorAll('.timeline li');
+        const timelinePhoto = document.getElementById('timeline-photo').querySelector('img');
+
+        timelineItems.forEach(item => {
+            item.addEventListener('mouseover', function () {
+                const imgUrl = this.getAttribute('data-img');
+                timelinePhoto.src = imgUrl;
+            });
+        });
+    </script>
+</body>
+
+</html>
+
